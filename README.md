@@ -118,7 +118,7 @@ function NoxBehavior:Start()
   
   self:Call('Greet', bob, 'hello') 
   
-  local reply = self:Call('Converse', bob, 'how's your day?') 
+  local reply = self:Call('Converse', bob, "how's your day?") 
   print(reply) 
 end
 
@@ -141,7 +141,7 @@ function NoxBehavior:Start()
   
   self:Connect('Converse', function(question))
     print('The server asked me ' ..question)
-    return 'I don't want to talk to you!'
+    return 'I do not want to talk to you!'
   end)
 end
 
@@ -151,7 +151,7 @@ return NoxBehavior
 ```lua 
 -- [CLIENT] The server said hello to me
 -- [CLIENT] The server asked me how's your day
--- [SERVER] I don't want to talk to you!
+-- [SERVER] I do not want to talk to you!
 ```
 ## API:
 NoxBehavior boasts numerous useful functions to help you on your development journey!
